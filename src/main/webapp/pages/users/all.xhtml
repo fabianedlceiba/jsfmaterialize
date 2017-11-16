@@ -1,0 +1,56 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+	<div class="card">
+
+		<div class="card-content">
+
+			<span class="card-title"><h:outputText value="Busqueda" /></span>
+
+			<div class="row">
+				<div class="input-field col s3">
+					<h:inputText id="txtSearchName" value="#{user.userName}" />
+					<h:outputLabel id="lblSearchName" value="Nombre" />
+				</div>
+			</div>
+		</div>
+		<div class="card-action right-align">
+			<h:commandButton id="btnCreate" value="#{msg.btn_create}" styleClass="btn red darken-4" action="#{user.create}" />
+			<h:commandButton id="btnSearch" value="#{msg.btn_search}" styleClass="btn">
+				<f:ajax execute="@this txtSearchName" render="pnlUsers" listener="#{user.search}" event="click" onevent="prueba" />
+			</h:commandButton>
+		</div>
+	</div>
+	<h:panelGroup id="pnlUsers" styleClass="card-panel" layout="block">
+		<h:dataTable id="tblUsers" var="item" value="#{user.users}" rendered="#{not empty user.users}">
+			<h:column p:style="width: 15%" p:class="center">
+				<h:commandLink action="#{user.edit(item.id)}" styleClass="btn blue darken-4">
+					<i class="material-icons">edit</i>
+				</h:commandLink>
+				<h:commandLink styleClass="btn red darken-4">
+					<i class="material-icons">delete</i>
+					<f:ajax execute="@this" render="pnlUsers" listener="#{user.delete(item.id)}" event="click" onevent="prueba" />
+				</h:commandLink>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Id</f:facet>
+				<h:outputText value="#{item.id}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Nombre</f:facet>
+				<h:outputText value="#{item.name}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Apellido</f:facet>
+				<h:outputText value="#{item.lastName}" />    
+			</h:column>
+			<h:column>
+				<f:facet name="header">Género</f:facet>
+				<h:outputText value="#{msg[item.gender.messageKey]}" />    
+			</h:column>
+		</h:dataTable>
+	</h:panelGroup>
+</ui:composition>
