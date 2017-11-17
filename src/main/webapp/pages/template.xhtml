@@ -4,108 +4,119 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
 
-    <h:head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-        <title>CISA</title>
-        <h:outputStylesheet library="css" name="materialize.min.css" />
-        <h:outputStylesheet library="css" name="dataTables.material.min.css" />
-        <h:outputStylesheet library="css" name="material.min.css" />
-        <h:outputStylesheet library="css" name="style.css" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css"></link>
-    </h:head>
+  <h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>CISA</title>
+    <h:outputStylesheet library="css" name="materialize.min.css" />
+    <h:outputStylesheet library="css" name="dataTables.material.min.css" />
+    <h:outputStylesheet library="css" name="material.min.css" />
+    <h:outputStylesheet library="css" name="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css"></link>
+  </h:head>
 
-    <h:body>
+  <h:body>
 
-        <div class="loading white">
+    <div class="loading white">
 
-            <div class="preloader-wrapper big active">
-                <div class="spinner-layer spinner-red-only">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="gap-patch">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-            </div>
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-red-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <header>
-            <nav class="nav-top">
-                <div class="nav-wrapper grey darken-3">
-                    <a href="#" data-activates="nav-mobile" class="button-collapse show-on-large">
-                        <i class="material-icons">menu</i>
-                    </a>
-                </div>
-            </nav>
-            <ul id="nav-mobile" class="side-nav">
-                <li>
-                    <div class="user-view">
-                        <div class="background">
-                            <h:graphicImage library="img" name="congruent_outline.png" />
-                        </div>
-                        <a href="#!name"><span class="white-text name">John Doe</span></a>
-                        <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-                    </div>
-                </li>
-                <li><a class="subheader">Administración</a></li>
-                <li><a href="#{request.contextPath}/faces/pages/users/index.xhtml"><i class="material-icons">person_outline</i>Usuarios</a></li>
-                <li><div class="divider"></div></li>
-								<li><a href="#{request.contextPath}/faces/pages/login.xhtml"><i class="material-icons">exit_to_app</i>Salir</a></li>
-            </ul>
-        </header>
+    <header>
+      <nav class="nav-top">
+        <div class="nav-wrapper grey darken-3">
+          <a href="#" data-activates="nav-mobile" class="button-collapse show-on-large">
+            <i class="material-icons">menu</i>
+          </a>
+        </div>
+      </nav>
+      <ul id="nav-mobile" class="side-nav">
+        <li>
+          <div class="user-view">
+            <div class="background">
+              <h:graphicImage library="img" name="congruent_outline.png" />
+            </div>
+            <a href="#!name"><span class="white-text name">John Doe</span></a>
+            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+          </div>
+        </li>
+        <li><a class="subheader">Administración</a></li>
+        <li><a href="#{request.contextPath}/faces/pages/users/index.xhtml"><i class="material-icons">person_outline</i>Usuarios</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#{request.contextPath}/faces/pages/login.xhtml"><i class="material-icons">exit_to_app</i>Salir</a></li>
+      </ul>
+    </header>
 
-        <main>
-            <ui:insert name="content"></ui:insert>
-        </main>
+    <main>
+      <ui:insert name="content"></ui:insert>
+    </main>
 
-        <footer class="page-footer grey darken-3">
-            <div class="footer-copyright">© 2017 UNICIENCIA</div>
-        </footer>
+    <footer class="page-footer grey darken-3">
+      <div class="footer-copyright">© 2017 UNICIENCIA</div>
+    </footer>
 
 
-        <h:outputScript library="js" name="jquery-3.2.1.min.js" />
-        <h:outputScript library="js" name="materialize.min.js" />
-        <h:outputScript library="js" name="jquery.dataTables.min.js" />
-        <h:outputScript library="js" name="dataTables.material.min.js" />
+    <h:outputScript library="js" name="jquery-3.2.1.min.js" />
+    <h:outputScript library="js" name="materialize.min.js" />
+    <h:outputScript library="js" name="jquery.dataTables.min.js" />
+    <h:outputScript library="js" name="dataTables.material.min.js" />
 
-        <script type="text/javascript">
+    <script type="text/javascript">
 
-            var table_prop = {
-                pagingType: "full",
-                stateSave: true,
-                destroy: true,
-                dom: "tip"
-            };
+      var table_prop = {
+        pagingType: "full",
+        stateSave: true,
+        destroy: true,
+        dom: "tip"
+      };
 
-            $(document).ready(function () {
-                $(".button-collapse").sideNav({'edge': 'left'});
+      $(document).ready(function () {
+        $(".button-collapse").sideNav({'edge': 'left'});
 
-                $("#tblUsers").DataTable(table_prop);
+        $("#tblUsers").DataTable(table_prop);
 
-                $('.loading').fadeOut(600);
-								
-								$('select').material_select();
+        $('.loading').fadeOut(600);
 
-            });
+        $('select').material_select();
 
-            function prueba(data) {
-                
-                if (data.status === 'begin') {
-                    $('#tblUsers').DataTable().destroy();
-                    $('.loading').fadeIn(600);
-                } else if (data.status === 'success') {
-                    $('#tblUsers').DataTable(table_prop);
-                    $('.loading').fadeOut(600);
-                }
-            }
+        $('.datepicker').pickadate({
+          selectMonths: true, // Creates a dropdown to control month
+          selectYears: 15, // Creates a dropdown of 15 years to control year,
+          format: 'dd/mm/yyyy',
+          today: 'Today',
+          clear: 'Clear',
+          close: 'Ok',
+          closeOnSelect: false // Close upon selecting a date,
+        });
 
-        </script>
 
-    </h:body>
+      });
+
+      function prueba(data) {
+
+        if (data.status === 'begin') {
+          $('#tblUsers').DataTable().destroy();
+          $('.loading').fadeIn(600);
+        } else if (data.status === 'success') {
+          $('#tblUsers').DataTable(table_prop);
+          $('.loading').fadeOut(600);
+        }
+      }
+
+    </script>
+
+  </h:body>
 
 </html>

@@ -8,6 +8,7 @@ package com.fernando.jsfproject.domain;
 import com.fernando.jsfproject.entities.DbUser;
 import com.fernando.jsfproject.enums.EGender;
 import java.io.Serializable;
+import java.time.LocalDate;
 
 /**
  *
@@ -20,6 +21,7 @@ public class User implements Serializable {
     private String lastName;
 		private String password;
 		private EGender gender;
+		private LocalDate birthday;
 
     public User() {
     }
@@ -68,6 +70,14 @@ public class User implements Serializable {
 		public String getPassword() {
 			return password;
 		}
+		
+		public void setBirthday(LocalDate birthday) {
+			this.birthday = birthday;
+		}
+		
+		public LocalDate getBirthday() {
+			return birthday;
+		}
 
     public DbUser toEntity() {
         DbUser dbUser = new DbUser();
@@ -76,6 +86,7 @@ public class User implements Serializable {
         dbUser.setLastName(getLastName());
 				dbUser.setGender(getGender());
 				dbUser.setPassword(getPassword());
+				dbUser.setBirthday(getBirthday());
         return dbUser;
     }
 
@@ -85,6 +96,7 @@ public class User implements Serializable {
         setLastName(user.getLastName());
 				setGender(user.getGender());
 				setPassword(user.getPassword());
+				setBirthday(user.getBirthday());
     }
 
     @Override

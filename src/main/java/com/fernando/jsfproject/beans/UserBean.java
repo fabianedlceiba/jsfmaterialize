@@ -102,7 +102,7 @@ public class UserBean implements Serializable {
 		if (getItem() == null) {
 			return;
 		}
-		
+
 		LOG.info(getItem().toString());
 
 		if (getItem().getId() == null) {
