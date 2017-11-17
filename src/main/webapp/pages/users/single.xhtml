@@ -7,19 +7,19 @@
     <div class="card-content">
       <span class="card-title">Usuarios</span>
       <div class="row">
-        <div class="input-field col s3">
+        <div class="input-field col m3 s12">
           <h:inputText id="txtName" value="#{user.item.name}" />
           <h:outputLabel id="lblName" value="Nombre" />
         </div>
-        <div class="input-field col s3">
+        <div class="input-field col m3 s12">
           <h:inputText id="txtLastName" value="#{user.item.lastName}" />
           <h:outputLabel id="lblLastName" value="Apellido" />
         </div>
-        <div class="input-field col s3">
+        <div class="input-field col m3 s12">
           <h:inputSecret id="txtPassword" value="#{user.item.password}" />
           <h:outputLabel id="lblPassword" value="Password" />
         </div>
-        <div class="input-field col s3">
+        <div class="input-field col m3 s12">
           <h:selectOneMenu id="ddlGender" value="#{user.item.gender}">
             <f:selectItem itemLabel="" />
             <f:selectItems var="gender" value="#{dropdownlist.genders}" itemLabel="#{msg[gender.messageKey]}" />
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s3">
+        <div class="input-field col m3 s12">
           <h:inputText id="txtBirthday" value="#{user.item.birthday}" styleClass="datepicker" />
           <h:outputLabel id="lblBirthday" value="Fecha cumpleaños" />
         </div>
