@@ -14,7 +14,6 @@ import javax.faces.convert.FacesConverter;
 
 /**
  *
- * @author
  */
 @FacesConverter(forClass = LocalDate.class)
 public class LocalDateConverter implements Converter {
