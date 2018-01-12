@@ -86,6 +86,7 @@ public class User implements Serializable {
         dbUser.setLastName(getLastName());
 				dbUser.setGender(getGender());
 				dbUser.setPassword(getPassword());
+				dbUser.setBirthday(getBirthday());
         return dbUser;
     }
 
@@ -95,6 +96,7 @@ public class User implements Serializable {
         setLastName(user.getLastName());
 				setGender(user.getGender());
 				setPassword(user.getPassword());
+				setBirthday(user.getBirthday());
     }
 
     @Override

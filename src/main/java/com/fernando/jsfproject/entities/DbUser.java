@@ -6,6 +6,7 @@
 package com.fernando.jsfproject.entities;
 
 import com.fernando.jsfproject.enums.EGender;
+import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -32,6 +33,9 @@ public class DbUser extends DbBase {
 	
 	@Column(name = "password", length = 30)
 	private String password;
+	
+	@Column(name = "birthday")
+	private LocalDate birthday;
 
 	public DbUser() {
 
@@ -67,6 +71,14 @@ public class DbUser extends DbBase {
 	
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public void setBirthday(LocalDate birthday) {
+		this.birthday = birthday;
+	}
+	
+	public LocalDate getBirthday() {
+		return birthday;
 	}
 
 }

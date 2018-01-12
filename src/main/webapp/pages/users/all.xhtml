@@ -11,7 +11,7 @@
 			<span class="card-title"><h:outputText value="Busqueda" /></span>
 
 			<div class="row">
-				<div class="input-field col s3">
+				<div class="input-field col m3 s6">
 					<h:inputText id="txtSearchName" value="#{user.userName}" />
 					<h:outputLabel id="lblSearchName" value="Nombre" />
 				</div>
@@ -50,6 +50,10 @@
 			<h:column>
 				<f:facet name="header">Género</f:facet>
 				<h:outputText value="#{msg[item.gender.messageKey]}" />    
+			</h:column>
+      <h:column>
+				<f:facet name="header">Fecha de Nacimiento</f:facet>
+				<h:outputText value="#{item.birthday}" />    
 			</h:column>
 		</h:dataTable>
 	</h:panelGroup>
