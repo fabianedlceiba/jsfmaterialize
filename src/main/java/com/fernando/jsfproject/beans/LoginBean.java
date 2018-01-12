@@ -63,6 +63,7 @@ public class LoginBean implements Serializable {
 			return INDEX;
 		}
 
+		
 		return null;
 	}
 
