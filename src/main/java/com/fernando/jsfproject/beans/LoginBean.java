@@ -59,6 +59,8 @@ public class LoginBean implements Serializable {
 		if (user != null) {
 			SessionHelper.setAttribute("userid", user.getId());
 
+
+			
 			return INDEX;
 		}
 		return null;
