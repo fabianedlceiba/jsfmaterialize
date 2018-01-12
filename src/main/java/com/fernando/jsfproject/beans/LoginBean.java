@@ -54,7 +54,14 @@ public class LoginBean implements Serializable {
 	}
 
 	public String login() {
-		User user = getService().findByUsernameAndPassword(getName(), getPassword());
+
+
+
+
+
+
+
+	    User user = getService().findByUsernameAndPassword(getName(), getPassword());
 
 		if (user != null) {
 			SessionHelper.setAttribute("userid", user.getId());
