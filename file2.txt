@@ -14,15 +14,15 @@ s ds
  s
  d 
  sd
- 
 
 
- g
- f
- gf
- g
- f
- g
- fg
- :wq
+
+
+fdf
+
+
+df
+f
+d
+f
 
